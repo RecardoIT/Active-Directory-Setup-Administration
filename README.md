@@ -1,9 +1,9 @@
 <h1>💻Virtual Machine Home Lab Setup</h1>
 
  <h2>Description</h2>
-A step-by-step guide to setting up a homelab environment in a virtual machine running Windows Server 2022. Learn how to install and configure Windows, create and manage Active Directory, add users, and set up file and folder permissions.
+A comprehensive guide to setting up a homelab environment in a virtual machine running Windows Server 2022. This includes installing and configuring Windows, creating and managing Active Directory, adding users, and setting up file and folder permissions. Additionally, the guide explores configuring an internal network in Oracle VirtualBox and separating internal and NAT networks using Windows settings.
 
-In this section, i will be going over how to set and configure permissions for files, folders and users within windows and active directory.
+
 <br />
 
 
