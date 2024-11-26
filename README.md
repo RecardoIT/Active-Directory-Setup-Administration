@@ -7,15 +7,9 @@ In this section, i will be going over how to set and configure permissions for f
 <br />
 
 
-<h2>Languages and Utilities Used</h2>
-
-- <b>PowerShell</b> 
-- <b>Diskpart</b>
-
 <h2>Environments Used </h2>
 
 - <b>Windows Server 2022</b> 
-- <b>Windows 11 Enterprise</b> 
 
 <h2>Program walk-through:</h2>
 
