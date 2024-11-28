@@ -1,4 +1,4 @@
-# Active Directory Setup & Administration ⚙️
+# Homelab & Active Directory Setup ⚙️
 
 ## Objective
 This projects, aims to give a homelab enviroment inside of a virtual machine, allowing the user to create an active directory domain, as well as test various I.T related subjects, without an internal system being potentially harmed in the process. 
