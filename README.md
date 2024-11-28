@@ -15,8 +15,9 @@ This projects, aims to give a homelab enviroment inside of a virtual machine, al
 - Oracle VirtualBox: Virtualization platform for creating test environments.
 - Active Directory Domain Services (AD DS): Tool for setting up and managing the domain.
 - PowerShell: Command-line tool for managing and automating AD tasks.
+- Windows Server 2022: Enterprise-level server platform for building and managing Active Directory domains.
 
-## Steps
+## Installing Virtual Machine
 drag & drop screenshots here or use imgur and reference them using imgsrc
 
 Every screenshot should have some text explaining what the screenshot is about.
