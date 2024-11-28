@@ -1,11 +1,9 @@
-# Active Directory Homelab Setup & Administration ⚙️
+# Active Directory Setup & Administration ⚙️
 
 ## Objective
 This projects, aims to give a homelab enviroment inside of a virtual machine, allowing the user to create an active directory domain, as well as test various I.T related subjects, without an internal system being potentially harmed in the process. 
 
 ### Skills Learned
-[Bullet Points - Remove this afterwards]
-
 - Active Directory Installation: Skilled in installing and configuring AD DS on Windows Server.
 - User & Group Management: Expertise in managing users, OUs, and groups in AD.
 - NS/DHCP Configuration: Knowledge of setting up DNS and DHCP for AD services.
