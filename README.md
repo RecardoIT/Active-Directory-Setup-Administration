@@ -154,12 +154,6 @@ From here, simply give your user a name and surname, here i have used the name "
 Then, set a password for your new user, i recommend checking "password never expires" as users like to write down their passwords onto paper, and having them write new password every 2 months for example could serve as a security risk to a business!
 <img src="https://i.imgur.com/v6oRHxr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Lets make one more user to make sure you have got the hang of it. Right click on one of the "users" organizational units and select "new" "user" lets fill in their information again and set them a password like last time, this time i will create a user in the "USA" organizational unit.
-<img src="https://i.imgur.com/v6oRHxr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
-
-This time i will name my user "Max Holloway" and then create another group in our "users" organizational folder called L1 Help Desk like last time. 
-<img src="" height="80%" width="80%" alt="Disk Sanitization Steps.png"/>
-
 In order to add a user into a group, right click on a chosen group and click "properties"
 <img src="https://imgur.com/HXipZk1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
@@ -169,10 +163,5 @@ Now, enter the name of the user you wish to join the following group, by typing 
 Finally, press "ok" and then the "apply" button, and that users will now be added to your chosen group!
 <img src="https://imgur.com/0MMromZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-
-
-
-In this example, i have given the group "Level 3" full control over the secret folder, and the specific user "Recardo" is denied every permission possible, meaning they will not be able to access this folder anymore.
-<img src="https://i.imgur.com/aeq4U3E.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
