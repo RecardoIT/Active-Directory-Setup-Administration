@@ -1,7 +1,7 @@
 ## Windows Server 2022: VM & AD Setup⚙️
 
 ## Objective
-This projects, aims to give a homelab enviroment inside of a virtual machine, allowing the user to create an active directory domain, as well as test various I.T related subjects, without an internal system being potentially harmed in the process. 
+This GitHub project provides a homelab environment within a virtual machine, enabling users to set up an Active Directory domain and explore various IT-related tasks. It's designed to offer a safe testing space without risking damage to internal systems, making it perfect for learning and experimentation.
 
 ### Skills Learned
 - Active Directory Installation: Skilled in installing and configuring AD DS on Windows Server.
@@ -19,107 +19,108 @@ This projects, aims to give a homelab enviroment inside of a virtual machine, al
 
 ## Installing Virtual Machine
 
-First, we will Create the Windows Server 2022 VM. Select the "ISO image" option and select your Windows Server 2022 ISO, make sure to check the desktop expirience under the "Type" section inside of Oracle VirtualBox 
+First, create a Windows Server 2022 VM. Choose the "ISO image" option, select your Windows Server 2022 ISO, and ensure "Desktop Experience" is checked under the "Type" section in Oracle VirtualBox.
 
 <img src="https://imgur.com/R6Hd4qY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Next, we will setup an admin username and password to boot into Windows with.
+Next, set up an admin username and password for Windows login.
 <br>
 <img src="https://imgur.com/4KN0ihY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-It's important to allocate the right amount of system memory as well as CPU threads My system contains 16GB RAM & 16CPU threads. Since we are not running any demanding applications on the Virtual Machine, i will allocate a quarter of RAM & CPU threads to be safe.
+Allocating the right amount of system memory and CPU threads is crucial. My system has 16 GB of RAM and 16 CPU threads. Since the VM won’t run resource-intensive applications, I’ll allocate a quarter of the RAM and CPU threads to ensure smooth performance.
 <img src="https://imgur.com/3avB9Lc.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Within Oracle VirtualBox, i will head to the advanced network tab and create a second network adapter under the option internal network.
+In Oracle VirtualBox, navigate to the advanced network settings and add a second network adapter, selecting the "Internal Network" option.
 <img src="https://imgur.com/Hpzae80.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Installing Windows Server 2022. 
+Proceed with the installation of Windows Server 2022 on the VM.
 <img src="https://imgur.com/v8uWdDq.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Configuring Network Adapters
 
-Once Windows boots, go to settings, and then under the "Network & Internet" option, select "Adapter Settings"
+Once Windows boots, open Settings, navigate to Network & Internet, and select Adapter Settings.
 <img src="https://imgur.com/sJxxgsI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Click a ethernet adapter and "Properties" pay attention to the "IpV4 address" addresses starting with (example 10.0.8.12) will be the nat adapter 
+Click on an Ethernet adapter, then select Properties. Note the IPv4 address—addresses starting with "10.0.x.x" (e.g., 10.0.8.12) indicate the NAT adapter.
 <img src="https://imgur.com/8isXdtW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Once that's done, rename the second network adapter to "internal" so you can clearly differenciate between the internal network, and traffic going through the nat adapter.
+
+Rename the second network adapter to "Internal" to clearly differentiate between internal network traffic and traffic through the NAT adapter.
 <img src="https://imgur.com/T3uXGU4.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Installing Active Directory
 
-Now we are ready to install Active Directory, search for "Server Manager" through the Windows search bar and open it.
+Now, we're ready to install Active Directory. Search for "Server Manager" in the Windows search bar and open it.
 <img src="https://imgur.com/4BQZC7i.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Click on the "Manage Tab" and then "Add Roles & Features" Make sure to click the "Active Directory Domain Services" checkbox to ensure the directory is installed properly. 
+Click on the "Manage" tab, then select "Add Roles & Features". Make sure to check the "Active Directory Domain Services" checkbox to ensure proper installation of the directory.
 <img src="https://imgur.com/iuwVoXs.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Click next to any further prompts, and click the "Install" button once reaching the results page.
+Click Next through any further prompts, and then click the "Install" button when you reach the results page.
 <img src="https://imgur.com/dAFzyPp.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-After that, a new page will open, here we are going to check "Add a new forest" and type in the name of our new local domain! Make sure to add .local to the end of your chosen name in order to create an internal domain. 
+A new page will open. Check "Add a new forest" and enter the name for your new local domain. Be sure to add .local at the end of your chosen name to create an internal domain.
 <img src="https://imgur.com/nGw4CzN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Continue to press next on the following prompts, and then hit the "Install" button on the "prerequisites check" page.
+Continue clicking Next on the following prompts, then click the "Install" button on the "Prerequisites Check" page.
 <img src="https://imgur.com/nGw4CzN.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-You will then be asked to restart your machine, if not then manually press windows logo, the power button and restart your machine. After doing so, the machine will apply the needed computer settings.
+You will be prompted to restart your machine. If not, manually press the Windows logo, select the power button, and restart your machine. After restarting, the system will apply the necessary settings.
 <img src="https://imgur.com/UzIzOVm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Open "Server Manager" again, and your AD DS will be marked green, as well as anything else installed! 
+Open Server Manager again, and you'll see that Active Directory Domain Services (AD DS) is marked green, along with any other installed features.
 <img src="https://imgur.com/gxBpXHt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Organising Active Directory
 
-Click on the windows search icon, and search for "user" then click on "Active Directory Users and Computers"
+Click on the Windows search icon, type "user", and select "Active Directory Users and Computers".
 <img src="https://imgur.com/FPkDpOE.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-This will open a window, where we can see our local domain that we created earlier, mine for example is "testdirectory.local" Left click on this space, and you will see an array of oragnizational units. 
+This will open a window where you can see the local domain you created earlier (e.g., testdirectory.local). Left-click on the domain, and you'll see an array of Organizational Units (OUs).
 <img src="https://i.imgur.com/U7ytgp0.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Think of Organization Units as folders within windows, they help to keep the active directory tidy, as well as seperate different organisations within a domain. Right click on the "testdirectory.local" hover over new, and click Organizational Unit to create one of our own.
+Think of Organizational Units (OUs) as folders in Windows. They help keep Active Directory organized and allow separation of different entities within a domain. Right-click on testdirectory.local, hover over New, and select Organizational Unit to create your own.
 <img src="https://i.imgur.com/MBR6mcC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-To simulate a working enviroment, lets name this organizational unit as "UK" we are then going to follow the same proccess and make two additional organizational units named "USA" & "ASIA"
+To simulate a working environment, name the first Organizational Unit "UK". Then, follow the same process to create two additional OUs named "USA" and "ASIA".
 <img src="https://i.imgur.com/gIqbRPY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-After that, right click on the "UK" organizational unit we just made, and create 3 seperate organizational units inside of it, called "Computer" "Users" "Server" repeat this proccess for the "USA" and "ASIA" organizational units we created earlier. You will now see that our domain begins to grow a structure, just like it would in a real business! 
+Next, right-click on the "UK" Organizational Unit, and create three separate OUs inside it: "Computer", "Users", and "Server". Repeat this process for the "USA" and "ASIA" OUs you created earlier. You'll now see your domain structure starting to grow, just like it would in a real business environment!
 <img src="https://i.imgur.com/K0Swxs3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-We can now move into creating a group. Right click on any of the "users" organizational units we created and select "new" "group" groups are created to hold a vast amount of users neatly!
+Now, let's create a group. Right-click on any of the "Users" Organizational Units you created, select "New", then choose "Group". Groups are used to organize and manage large numbers of users efficiently!
 <img src="https://i.imgur.com/TEhGdX2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-From here, give your user a name and surname, If your group was called "admins" for example and you wanted to add multiple admin users to the group, then you may want to set the user login name to something like a-sstone. If you added a new user called "Adam Smith" then you could set their login name as "a-asmith" to keep the admin names consistent and neat. 
+When creating a user, provide their first name and last name. For example, if your group is called "Admins" and you want to add multiple admin users, you might set the user's login name to something like a-sstone. If you're adding a new user named "Adam Smith", their login name could be a-asmith to maintain consistency and keep the names neat.
 <img src="https://i.imgur.com/tlc22xi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Then, set a password for your new user, i recommend checking "password never expires" as users like to write down their passwords onto paper, and having them write new password every 2 months for example could serve as a security risk to a business!
+Next, set a password for the new user. I recommend checking "Password never expires", as frequent password changes can lead to users writing down their passwords, which could pose a security risk to the business.
 <img src="https://i.imgur.com/v6oRHxr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-In order to add a user into a group, right click on a chosen group and click "properties"
+To add a user to a group, right-click on the chosen group and select "Properties".
 <img src="https://imgur.com/HXipZk1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Now, enter the name of the user you wish to join the following group, by typing out their name in the object names section.
+In the Properties window, go to the "Members" tab. Click "Add", then type the name of the user you wish to add to the group in the Object Names section.
 <img src="https://imgur.com/68MtEi9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Finally, press "ok" and then the "apply" button, and that users will now be added to your chosen group!
+Finally, press "OK", then click "Apply", and the user will now be added to the selected group!
 <img src="https://imgur.com/0MMromZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Configuring User & Group Permissions
 
-Next you will learn how to secure folders and files to be protected against certain users or groups! 
+Next, you'll learn how to secure folders and files to protect them from specific users or groups!
 <img src="https://imgur.com/7zgeEya.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-To begin, select the file and folder you want to grant or deny permissions for and right click it, choosing "properties" for example, i am going to choose my folder called "secret" on the desktop. 
+To begin, select the file or folder you want to grant or deny permissions for, right-click it, and choose "Properties". For example, I'll choose my folder called "secret" on the desktop.
 <img src="https://i.imgur.com/AVq8vxr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Head to the security tab, this is where you can choose what specific users or groups have access to specific files and their permissions. Click the edit button next to "to change permissions"
+Go to the Security tab. This is where you can manage which specific users or groups have access to the file or folder and set their permissions. Click the Edit button next to "To change permissions".
 <img src="https://i.imgur.com/X7AwTAi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-This will open the advanced security section of said file or folder. Click on the add button and a text box will show up at the bottom titled "enter the objects names to select" type the name of the user or group you wish to use to set permissions with. I will type in a group i made called "Level 3" click ok when you're done.
+This will open the Advanced Security Settings for the file or folder. Click the Add button, and a text box titled "Enter the object names to select" will appear at the bottom. Type the name of the user or group you want to set permissions for. For example, I'll type in a group I created called "Level 3". Click OK when you're done.
 <img src="https://i.imgur.com/11k1ra2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-You will then be able to set the permissions of said user or group below. By checking full control, you allow the user or group to have administrator permissions over said file or folder, you can use this to add a specific user or group and click "deny" on the checkbox "full control" for example to deny that user or group from accessing secure files!
+Once you've added the user or group, you can set their permissions below. Checking Full Control grants the user or group administrator-level access to the file or folder. To deny access, you can check Deny next to Full Control, which will prevent that user or group from accessing the file or folder.
 <img src="https://i.imgur.com/8Pl8ozR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
