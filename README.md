@@ -41,7 +41,7 @@ Installing Windows Server 2022.
 Once Windows boots, go to settings, and then under the "Network & Internet" option, select "Adapter Settings"
 <img src="https://imgur.com/sJxxgsI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Now, click a ethernet adapter and "Properties" pay attention to the "IpV4 address" addresses starting with (example 10.0.8.12) will be the nat adapter 
+Click a ethernet adapter and "Properties" pay attention to the "IpV4 address" addresses starting with (example 10.0.8.12) will be the nat adapter 
 <img src="https://imgur.com/8isXdtW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Once that's done, rename the second network adapter to "internal" so you can clearly differenciate between the internal network, and traffic going through the nat adapter.
@@ -67,7 +67,7 @@ Continue to press next on the following prompts, and then hit the "Install" butt
 You will then be asked to restart your machine, if not then manually press windows logo, the power button and restart your machine. After doing so, the machine will apply the needed computer settings.
 <img src="https://imgur.com/UzIzOVm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Finally, open "Server Manager" again, and if successful your AD DS will be marked green, as well as anything else installed during the creation of your internal domain! 
+Open "Server Manager" again, and your AD DS will be marked green, as well as anything else installed! 
 <img src="https://imgur.com/gxBpXHt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Organising Active Directory
@@ -87,10 +87,10 @@ To simulate a working enviroment, lets name this organizational unit as "UK" we 
 After that, right click on the "UK" organizational unit we just made, and create 3 seperate organizational units inside of it, called "Computer" "Users" "Server" repeat this proccess for the "USA" and "ASIA" organizational units we created earlier. You will now see that our domain begins to grow a structure, just like it would in a real business! 
 <img src="https://i.imgur.com/K0Swxs3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Now the complicated part is out of the way, we can move into creating a group. Right click on any of the "users" organizational units we created and select "new" "group" groups are created to hold a vast amount of users neatly, we'll get into adding users to these groups in just a moment!
+We can now move into creating a group. Right click on any of the "users" organizational units we created and select "new" "group" groups are created to hold a vast amount of users neatly!
 <img src="https://i.imgur.com/TEhGdX2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-From here, simply give your user a name and surname, here i have used the name "Simon Stone". If your group was called "admins" for example and you wanted to add multiple admin users to the group, then you may want to set the user login name to something like a-sstone. If you added a new user called "Adam Smith" then you could set their login name as "a-asmith" in order to keep the admin names consistent and neat. 
+From here, give your user a name and surname, If your group was called "admins" for example and you wanted to add multiple admin users to the group, then you may want to set the user login name to something like a-sstone. If you added a new user called "Adam Smith" then you could set their login name as "a-asmith" to keep the admin names consistent and neat. 
 <img src="https://i.imgur.com/tlc22xi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Then, set a password for your new user, i recommend checking "password never expires" as users like to write down their passwords onto paper, and having them write new password every 2 months for example could serve as a security risk to a business!
@@ -107,13 +107,13 @@ Finally, press "ok" and then the "apply" button, and that users will now be adde
 
 ## Configuring User & Group Permissions
 
-Lets say you have a folder or specific file that you only want a user, or a group of users to have access to, how do we do this? we'll it is very simple! 
+Next you will learn how to secure folders and files to be protected against certain users or groups! 
 <img src="https://imgur.com/7zgeEya.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 To begin, select the file and folder you want to grant or deny permissions for and right click it, choosing "properties" for example, i am going to choose my folder called "secret" on the desktop. 
 <img src="https://i.imgur.com/AVq8vxr.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-After that, head to the security tab, this is where you can choose what specific users or groups have access to specific files and their permissions, such as being able to change the name of a file, or modifying its contents completely. Click the edit button next to "to change permissions"
+Head to the security tab, this is where you can choose what specific users or groups have access to specific files and their permissions. Click the edit button next to "to change permissions"
 <img src="https://i.imgur.com/X7AwTAi.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 This will open the advanced security section of said file or folder. Click on the add button and a text box will show up at the bottom titled "enter the objects names to select" type the name of the user or group you wish to use to set permissions with. I will type in a group i made called "Level 3" click ok when you're done.
@@ -122,7 +122,7 @@ This will open the advanced security section of said file or folder. Click on th
 You will then be able to set the permissions of said user or group below. By checking full control, you allow the user or group to have administrator permissions over said file or folder, you can use this to add a specific user or group and click "deny" on the checkbox "full control" for example to deny that user or group from accessing secure files!
 <img src="https://i.imgur.com/8Pl8ozR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-<img src="https://imgur.com/0MMromZ.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
+
 
 
 
