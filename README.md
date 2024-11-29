@@ -41,7 +41,7 @@ Proceed with the installation of Windows Server 2022 on the VM.
 Once Windows boots, open Settings, navigate to Network & Internet, and select Adapter Settings.
 <img src="https://imgur.com/sJxxgsI.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Click on an Ethernet adapter, then select Properties. Note the IPv4 address—addresses starting with "10.0.x.x" (e.g., 10.0.8.12) indicate the NAT adapter.
+Click on an Ethernet adapter, then select Properties. IPv4 address—addresses starting with "10.0.x.x" (e.g., 10.0.8.12) indicate the NAT adapter.
 <img src="https://imgur.com/8isXdtW.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
@@ -68,7 +68,7 @@ Continue clicking Next on the following prompts, then click the "Install" button
 You will be prompted to restart your machine. If not, manually press the Windows logo, select the power button, and restart your machine. After restarting, the system will apply the necessary settings.
 <img src="https://imgur.com/UzIzOVm.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Open Server Manager again, and you'll see that Active Directory Domain Services (AD DS) is marked green, along with any other installed features.
+Open Server Manager again, you'll see that Active Directory Domain Services (AD DS) is marked green.
 <img src="https://imgur.com/gxBpXHt.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 ## Organising Active Directory
@@ -82,10 +82,10 @@ This will open a window where you can see the local domain you created earlier (
 Think of Organizational Units (OUs) as folders in Windows. They help keep Active Directory organized and allow separation of different entities within a domain. Right-click on testdirectory.local, hover over New, and select Organizational Unit to create your own.
 <img src="https://i.imgur.com/MBR6mcC.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-To simulate a working environment, name the first Organizational Unit "UK". Then, follow the same process to create two additional OUs named "USA" and "ASIA".
+Name the first Organizational Unit "UK", then create two more OUs: "USA" and "ASIA".
 <img src="https://i.imgur.com/gIqbRPY.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Next, right-click on the "UK" Organizational Unit, and create three separate OUs inside it: "Computer", "Users", and "Server". Repeat this process for the "USA" and "ASIA" OUs you created earlier. You'll now see your domain structure starting to grow, just like it would in a real business environment!
+Right-click the "UK" OU and create three OUs: "Computer", "Users", and "Server". Repeat for the "USA" and "ASIA" OUs. Your domain structure will now resemble a real business environment!
 <img src="https://i.imgur.com/K0Swxs3.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Now, let's create a group. Right-click on any of the "Users" Organizational Units you created, select "New", then choose "Group". Groups are used to organize and manage large numbers of users efficiently!
@@ -100,7 +100,7 @@ Next, set a password for the new user. I recommend checking "Password never expi
 To add a user to a group, right-click on the chosen group and select "Properties".
 <img src="https://imgur.com/HXipZk1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-In the Properties window, go to the "Members" tab. Click "Add", then type the name of the user you wish to add to the group in the Object Names section.
+In the Properties window, go to the "Members" tab, click "Add", and enter the user’s name in the Object Names section.
 <img src="https://imgur.com/68MtEi9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Finally, press "OK", then click "Apply", and the user will now be added to the selected group!
@@ -120,7 +120,7 @@ Go to the Security tab. This is where you can manage which specific users or gro
 This will open the Advanced Security Settings for the file or folder. Click the Add button, and a text box titled "Enter the object names to select" will appear at the bottom. Type the name of the user or group you want to set permissions for. For example, I'll type in a group I created called "Level 3". Click OK when you're done.
 <img src="https://i.imgur.com/11k1ra2.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-Once you've added the user or group, you can set their permissions below. Checking Full Control grants the user or group administrator-level access to the file or folder. To deny access, you can check Deny next to Full Control, which will prevent that user or group from accessing the file or folder.
+Set permissions below: Full Control grants admin access, and Deny blocks access.
 <img src="https://i.imgur.com/8Pl8ozR.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 
