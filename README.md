@@ -6,7 +6,7 @@ This GitHub project provides a homelab environment within a virtual machine, ena
 ### Skills Learned
 - Active Directory Installation: Skilled in installing and configuring AD DS on Windows Server.
 - User & Group Management: Expertise in managing users, OUs, and groups in AD.
-- NS/DHCP Configuration: Knowledge of setting up DNS and DHCP for AD services.
+- DNS/DHCP Configuration: Knowledge of setting up DNS and DHCP for AD services.
 - Troubleshooting & Diagnostics: Skilled in resolving AD issues, including login and replication problems.
 - Backup & Recovery: Knowledgeable in creating backups and restoring AD configurations.
 
