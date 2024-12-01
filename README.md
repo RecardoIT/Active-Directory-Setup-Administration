@@ -100,7 +100,7 @@ Next, set a password for the new user. I recommend checking "Password never expi
 To add a user to a group, right-click on the chosen group and select "Properties".
 <img src="https://imgur.com/HXipZk1.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
-In the Properties window, go to the "Members" tab, click "Add", and enter the user’s name in the Object Names section.
+In Properties, go to "Members," click "Add," and enter the user's name.
 <img src="https://imgur.com/68MtEi9.png" height="80%" width="80%" alt="Disk Sanitization Steps"/>
 
 Finally, press "OK", then click "Apply", and the user will now be added to the selected group!
